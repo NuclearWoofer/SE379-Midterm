@@ -1,18 +1,17 @@
-import {react} from 'react';
-import { useState } from 'react';
-import './App.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Products from './Products';
 
 function App() {
   return (
-    <Router>
-      <Navigation />
+    <div>
+      {/* Persistent toolbar or navigation drawer component */}
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/products" component={Products} />
-        <Route path="/products/:id" component={ProductDetail} />
       </Switch>
-    </Router>
+    </div>
   );
 }
-export default App
+
+export default App;
