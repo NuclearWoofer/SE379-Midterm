@@ -12,7 +12,7 @@ function ProductDetails() {
     fetchData(`db.json/${id}`).then((data) => {
       setProduct(data);
     });
-  }, [id]);
+  }, [fetchData, id]);
 
   return (
     <>

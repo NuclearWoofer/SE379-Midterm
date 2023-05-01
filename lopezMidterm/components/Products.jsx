@@ -10,7 +10,7 @@ function ProductsList() {
     fetchData('db.json').then((data) => {
       setProducts(data);
     });
-  }, []);
+  }, [fetchData]);
 
   return (
     <>
@@ -23,7 +23,7 @@ function ProductsList() {
         <ul>
           {products.map((product) => (
             <li key={product.id}>
-              <Link to={`/Products.js/${product.id}`}>
+              <Link to={`/Products/${product.id}`}>
                 <img src={product.thumbnail} alt={product.title} />
                 <span>{product.title}</span>
               </Link>
