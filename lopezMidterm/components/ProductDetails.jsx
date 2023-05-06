@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { BrowserRouter as useParams, Router, Routes, Route, Link} from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
-//import Navigation from './Navigation';
 
 function ProductDetails() {
   const { id } = useParams();
