@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as useParams, Router, Routes, Route, Link} from 'react-router-dom';
-import useFetch from '../hooks/useFetch';
+import  { useEffect, useState } from 'react';
+import { BrowserRouter as useParams, Link} from 'react-router-dom';
+import useFetch from './hooks/useFetch';
 
 function ProductDetails() {
   const { id } = useParams();

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import useFetch from '../hooks/useFetch';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useFetch from './hooks/useFetch.js';
 
-function ProductsList() {
+function Products() {
   const [products, setProducts] = useState([]);
   const { loading, error, fetchData } = useFetch();
 
   useEffect(() => {
-    fetchData('db.json').then((data) => {
+    fetchData('http://localhost:3000/products').then((data) => {
       setProducts(data);
     });
   }, [fetchData]);
@@ -23,7 +23,7 @@ function ProductsList() {
         <ul>
           {products.map((product) => (
             <li key={product.id}>
-              <Link to={`/Products/${product.id}`}>
+              <Link to={`/Products/${product.id}`} >
                 <img src={product.thumbnail} alt={product.title} />
                 <span>{product.title}</span>
               </Link>
@@ -35,4 +35,4 @@ function ProductsList() {
   );
 }
 
-export default ProductsList;
+export default Products;
