@@ -1,17 +1,16 @@
 import { NavLink } from 'react-router-dom';
 
-
 function Navigation() {
   return (
     <nav>
-      <ul>
+      <ul style={{ listStyle: 'none', display: 'flex', gap: '10px', color: '' }}>
         <li>
-          <NavLink exact to="/Home" activeClassName="active">
+          <NavLink exact to="/" activeclassname="active">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Products" activeClassName="active">
+          <NavLink to="/Products" activeclassname="active">
             Products
           </NavLink>
         </li>

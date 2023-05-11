@@ -1,0 +1,37 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+  }
+  
+  .product-image {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+  }
+  
+  .product-title {
+    display: block;
+    text-align: center;
+    margin-top: 10px; 
+  }
+  
+  ul {
+    list-style: none; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  }
+  
+  li {
+    padding: 16px;
+  }
+  
+  li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  

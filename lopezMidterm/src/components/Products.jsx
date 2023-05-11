@@ -1,16 +1,9 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFetch from './hooks/useFetch.js';
+import useFetch from '../hooks/useFetch';
+import './Products.css';
 
 function Products() {
-  const [products, setProducts] = useState([]);
-  const { loading, error, fetchData } = useFetch();
-
-  useEffect(() => {
-    fetchData('http://localhost:3000/products').then((data) => {
-      setProducts(data);
-    });
-  }, [fetchData]);
+  const { data: products, loading, error } = useFetch('/products');
 
   return (
     <>
@@ -20,11 +13,11 @@ function Products() {
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
-        <ul>
-          {products.map((product) => (
+        <ul className="products-grid">
+          {products.slice(0, 6).map((product) => (
             <li key={product.id}>
-              <Link to={`/Products/${product.id}`} >
-                <img src={product.thumbnail} alt={product.title} />
+              <Link to={`/products/${product.id}`}>
+                <img src={product.image} alt={product.title} />
                 <span>{product.title}</span>
               </Link>
             </li>

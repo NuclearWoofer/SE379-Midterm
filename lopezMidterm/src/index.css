@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  text-align: center;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -24,11 +24,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 h1 {
@@ -67,3 +67,36 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Add styles for dark mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+.dark-mode-toggle-label {
+  color: #fff;
+}
+
+.dark-mode-toggle-input {
+  background-color: #222;
+  border-color: #fff;
+}
+
+/* Add styles for light mode */
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+
+.light-mode-toggle-label {
+  color: #333;
+}
+
+.light-mode-toggle-input {
+  background-color: #fff;
+  border-color: #333;
+}
+
+

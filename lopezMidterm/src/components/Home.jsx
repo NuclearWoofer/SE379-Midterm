@@ -1,11 +1,9 @@
-//import React from 'react';
-import { Link } from 'react-router-dom';
-
 function Home() {
   return (
     <div>
       <h1>Michael Lopez Midterm</h1>
-      <Link to='/Products'>Go to Products</Link>
+      <h2>Boutique of Mysteries</h2>
+      <h3>Now with Dark Mode!</h3>
     </div>
   );
 }
