@@ -1,22 +1,28 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navigation() {
+const Navigation: React.FC = () => {
   return (
     <nav>
       <ul style={{ listStyle: 'none', display: 'flex', gap: '10px', color: '' }}>
         <li>
-          <NavLink exact to="/" activeclassname="active">
+          <NavLink to="/" activeClassName="active">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Products" activeclassname="active">
+          <NavLink to="/products" activeClassName="active">
             Products
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/checkout" activeClassName="active">
+            Checkout
           </NavLink>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navigation;
