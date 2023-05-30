@@ -30,3 +30,5 @@ A loading indicator must be displayed when waiting for our HTTP request to compl
 Components
 
 Do your best to reuse the components you made in Create a mini component library
+
+// json-server --watch db.json
