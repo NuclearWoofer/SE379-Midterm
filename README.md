@@ -4,8 +4,8 @@ React Programming | Midterm & Final Application
 
 This project will combine everything we have learned so far in React.
 
-#npm install
+npm install
 
-#npm run dev
+npm run dev
 
-#json-server --watch db.json 
+json-server --watch db.json 
